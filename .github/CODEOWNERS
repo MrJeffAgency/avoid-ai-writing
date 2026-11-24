@@ -1,0 +1,7 @@
+# Default owner for review requests
+* @mrjeffagency
+
+# Canonical skill and detector sources
+/SKILL.md @mrjeffagency
+/references/patterns.md @mrjeffagency
+/detector/ @mrjeffagency
