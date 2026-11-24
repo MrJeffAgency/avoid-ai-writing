@@ -24,9 +24,9 @@ Options:
 Use "--" to stop option parsing when the file name starts with a dash.
 
 Examples:
-  npx --package avoid-ai-writing-detector avoid-ai-writing draft.md
-  cat draft.md | npx --package avoid-ai-writing-detector avoid-ai-writing --context technical
-  npx --package avoid-ai-writing-detector avoid-ai-writing --source-mode rendered-markdown -- --draft.md
+  npx --package @mrjeffagency/avoid-ai-writing-detector avoid-ai-writing draft.md
+  cat draft.md | npx --package @mrjeffagency/avoid-ai-writing-detector avoid-ai-writing --context technical
+  npx --package @mrjeffagency/avoid-ai-writing-detector avoid-ai-writing --source-mode rendered-markdown -- --draft.md
 `;
 
 const CONTEXTS = AIDetector.CONTEXT_MODES;

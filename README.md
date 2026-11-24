@@ -6,7 +6,7 @@ Audit & rewrite content to remove AI writing patterns. A practical skill for any
 
 [![GitHub stars](https://img.shields.io/github/stars/mrjeffagency/avoid-ai-writing?style=social)](https://github.com/mrjeffagency/avoid-ai-writing/stargazers)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square)](LICENSE)
-[![npm version](https://img.shields.io/npm/v/avoid-ai-writing-detector.svg)](https://www.npmjs.com/package/avoid-ai-writing-detector)
+[![npm version](https://img.shields.io/npm/v/@mrjeffagency/avoid-ai-writing-detector.svg)](https://www.npmjs.com/package/@mrjeffagency/avoid-ai-writing-detector)
 [![detector](https://github.com/mrjeffagency/avoid-ai-writing/actions/workflows/detector-test.yml/badge.svg)](https://github.com/mrjeffagency/avoid-ai-writing/actions/workflows/detector-test.yml)
 [![Podcast](https://img.shields.io/badge/Podcast-Chain_of_Thought-purple?style=flat-square)](https://chainofthought.show/?utm_source=github&utm_medium=referral&utm_campaign=repo-readme&utm_content=avoid-ai-writing)
 [![X](https://img.shields.io/badge/X-@MrJeffAgency-black?style=flat-square&logo=x)](https://x.com/MrJeffAgency)
@@ -447,14 +447,14 @@ build step.
 It's also the single source of the numeric score: the skill itself (and `detect` mode) report *which* patterns are present and how severe (P0/P1/P2), and the engine is what turns those into one computed 0–100 `score`. There's deliberately no second, prose-estimated score in `SKILL.md` — one scorer, not two.
 
 ```bash
-npm install avoid-ai-writing-detector
+npm install @mrjeffagency/avoid-ai-writing-detector
 ```
 
 The npm package includes the detector runtime and CLI entry points, but not the
 repository's `scripts/` utilities. Clone the repository to run those scripts.
 
 ```js
-const AIDetector = require("avoid-ai-writing-detector");
+const AIDetector = require("@mrjeffagency/avoid-ai-writing-detector");
 const { score, label, issues } = AIDetector.analyzeText("Your text here…");
 console.log(score, label, issues.length);
 ```
@@ -464,11 +464,11 @@ console.log(score, label, issues.length);
 The package also ships a zero-dependency CLI:
 
 ```bash
-npx --package avoid-ai-writing-detector avoid-ai-writing draft.md
-cat draft.md | npx --package avoid-ai-writing-detector avoid-ai-writing --context technical
+npx --package @mrjeffagency/avoid-ai-writing-detector avoid-ai-writing draft.md
+cat draft.md | npx --package @mrjeffagency/avoid-ai-writing-detector avoid-ai-writing --context technical
 ```
 
-After a global install (`npm install -g avoid-ai-writing-detector`) the command
+After a global install (`npm install -g @mrjeffagency/avoid-ai-writing-detector`) the command
 is available as `avoid-ai-writing` directly.
 
 It prints the complete `analyzeText()` result as JSON and exits 0; usage and I/O
@@ -584,8 +584,8 @@ node detector/validate.js before.md after.md
 ```
 
 That path is relative to a cloned checkout. The npm package ships the same
-file, so after `npm install avoid-ai-writing-detector` run
-`node node_modules/avoid-ai-writing-detector/detector/validate.js before.md after.md`.
+file, so after `npm install @mrjeffagency/avoid-ai-writing-detector` run
+`node node_modules/@mrjeffagency/avoid-ai-writing-detector/detector/validate.js before.md after.md`.
 
 When working from a cloned checkout instead of the published npm package:
 
@@ -657,10 +657,10 @@ content damage. Editorial workflows use the advisory policy:
 node detector/validate.js --residual-policy warn before.md after.md
 ```
 
-After `npm install avoid-ai-writing-detector`, the same command is:
+After `npm install @mrjeffagency/avoid-ai-writing-detector`, the same command is:
 
 ```bash
-node node_modules/avoid-ai-writing-detector/detector/validate.js --residual-policy warn before.md after.md
+node node_modules/@mrjeffagency/avoid-ai-writing-detector/detector/validate.js --residual-policy warn before.md after.md
 ```
 
 Mechanical errors still fail. Warnings and residual findings remain visible
@@ -770,7 +770,7 @@ I publish this project through these channels only:
 - This repository, [`mrjeffagency/avoid-ai-writing`](https://github.com/mrjeffagency/avoid-ai-writing), including its [releases](https://github.com/mrjeffagency/avoid-ai-writing/releases) and the Claude plugin marketplace it hosts
 - [ClawHub](https://clawhub.ai/mrjeffagency/avoid-ai-writing)
 - The [OpenAI Plugins Directory](https://chatgpt.com/plugins/plugins_6a9b77b18b8881918efa9c1255868164)
-- npm: [`avoid-ai-writing-detector`](https://www.npmjs.com/package/avoid-ai-writing-detector) and [`avoid-ai-writing-mcp`](https://www.npmjs.com/package/avoid-ai-writing-mcp)
+- npm: [`@mrjeffagency/avoid-ai-writing-detector`](https://www.npmjs.com/package/@mrjeffagency/avoid-ai-writing-detector) and [`avoid-ai-writing-mcp`](https://www.npmjs.com/package/avoid-ai-writing-mcp)
 
 Skill directories and catalogs that copy `SKILL.md` from this repository are run by other people. They can fall behind the latest release, so compare the `version` in their copy's frontmatter with the [latest release](https://github.com/mrjeffagency/avoid-ai-writing/releases/latest). I don't control those pages and can't sell space on them.
 

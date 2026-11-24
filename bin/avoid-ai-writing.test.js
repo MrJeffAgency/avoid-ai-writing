@@ -49,7 +49,7 @@ const help = run(["--help"]);
 assert.strictEqual(help.status, 0);
 assert.ok(help.stdout.includes("Usage: avoid-ai-writing"), "expected usage text on stdout");
 assert.ok(
-  help.stdout.includes("npx --package avoid-ai-writing-detector avoid-ai-writing"),
+  help.stdout.includes("npx --package @mrjeffagency/avoid-ai-writing-detector avoid-ai-writing"),
   "expected npx to name the package explicitly",
 );
 assert.ok(

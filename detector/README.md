@@ -17,11 +17,11 @@ the two in sync.
 Install the published detector package in another project:
 
 ```bash
-npm install avoid-ai-writing-detector
+npm install @mrjeffagency/avoid-ai-writing-detector
 ```
 
 ```js
-const AIDetector = require("avoid-ai-writing-detector");
+const AIDetector = require("@mrjeffagency/avoid-ai-writing-detector");
 const result = AIDetector.analyzeText("Your text here…");
 console.log(result.score, result.label, result.issues.length);
 ```
@@ -32,8 +32,8 @@ The published package exposes an `avoid-ai-writing` command that scores a file
 or stdin and prints the full result as JSON:
 
 ```bash
-npx --package avoid-ai-writing-detector avoid-ai-writing draft.md
-cat draft.md | npx --package avoid-ai-writing-detector avoid-ai-writing --context technical
+npx --package @mrjeffagency/avoid-ai-writing-detector avoid-ai-writing draft.md
+cat draft.md | npx --package @mrjeffagency/avoid-ai-writing-detector avoid-ai-writing --context technical
 ```
 
 ### As a CI or pre-commit gate

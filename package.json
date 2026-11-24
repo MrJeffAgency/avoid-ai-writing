@@ -1,5 +1,5 @@
 {
-  "name": "avoid-ai-writing-detector",
+  "name": "@mrjeffagency/avoid-ai-writing-detector",
   "version": "3.39.0",
   "description": "Deterministic detection engine for the Avoid AI Writing skill \u2014 pattern + stylometric analysis of AI-generated text.",
   "license": "MIT",
